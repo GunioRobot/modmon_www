@@ -9,3 +9,9 @@ sub vcl_recv {
         set req.backend = modmon;
         return(pass);
 }
+
+sub vcl_fetch {
+set beresp.ttl = 60s; 
+esi; 
+
+}
