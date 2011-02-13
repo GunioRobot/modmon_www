@@ -11,7 +11,6 @@ sub vcl_recv {
 }
 
 sub vcl_fetch {
-set beresp.ttl = 60s; 
-esi; 
-
+	set beresp.ttl = 60s; 
+	esi; 
 }
